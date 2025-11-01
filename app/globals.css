@@ -1,0 +1,111 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.stat {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-8 { grid-column: span 8; }
+.col-12 { grid-column: span 12; }
+
+@media (max-width: 900px) {
+  .col-4, .col-6, .col-8 { grid-column: span 12; }
+}
+
+.btn {
+  border: 1px solid #0ea5e9;
+  background: #0ea5e9;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.secondary {
+  background: white;
+  color: #0ea5e9;
+}
+.btn.danger {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.input, .select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+}
+
+.label { font-size: 12px; color: #64748b; }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px 8px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.table th { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; }
+.table tr:hover { background: #f8fafc; }
+
+.toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+.badge { padding: 4px 8px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 999px; font-size: 12px; color: #475569; }
+
+.kpi { display: flex; align-items: baseline; gap: 8px; }
+.kpi small { color: #64748b; font-weight: 600; }
+
+footer { text-align: center; color: #94a3b8; font-size: 12px; padding-top: 24px; }
